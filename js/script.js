@@ -22,6 +22,7 @@ const getData = (error, url) => {
 	return fetch(url, {
 		headers: {
 			'X-Api-Key': API_KEY,
+			'Authorization': API_KEY,
 		}
 	}).then(response => {
 		if(!response.ok) {
