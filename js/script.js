@@ -98,8 +98,8 @@ const renderCard = (data) => {
 	
 }
 
-const showError = (err) => {
-	console.warn(err);
+const showError = (error) => {
+	console.warn(error);
 	newsList.innerHTML = '';
 	mainTitle.textContent = `Произошла ошибка, повторите попытку `;
 	mainTitle.classList.remove('hide');
