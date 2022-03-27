@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<title>Online news</title>
+		<meta charset="UTF-8">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/styles/choices.min.css"/>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="fonts/style.css">
+		<link rel="shortcut icon" href="favicon.ico">
+		<!-- <meta name="robots" content="noindex, nofollow"> -->
+		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script src="https://cdn.jsdelivr.net/npm/choices.js@9.0.1/public/assets/scripts/choices.min.js" defer></script>
+		<script src="js/script.js" defer></script>
+	</head>
+		<body>
+			<div class="wrapper">
+				<header class="header">
+					<div class="header__container">
+						<div class="header-row">
+							<div class="header-row__logo">
+								<img class="logo" src="img/logo.svg" alt="logo">
+							</div>
+							<div class="header-row__search">
+								<form class="form-search">
+									<div class="search-label">
+										<input type="text" class="search-input" name="search">
+
+										<button class="search-submit" type="submit">
+											<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M17.0995 16.1287L19.7849 18.8127C19.9101 18.9424 19.9794 19.1161 19.9778 19.2963C19.9763 19.4766 19.904 19.649 19.7765 19.7765C19.649 19.904 19.4766 19.9763 19.2963 19.9778C19.1161 19.9794 18.9424 19.9101 18.8127 19.7849L16.1274 17.0995C14.3725 18.603 12.1036 19.3683 9.79661 19.235C7.48964 19.1016 5.32399 18.0799 3.75408 16.3843C2.18418 14.6886 1.33206 12.4508 1.37654 10.1404C1.42101 7.82998 2.35862 5.62661 3.99261 3.99261C5.62661 2.35862 7.82998 1.42101 10.1404 1.37654C12.4508 1.33206 14.6886 2.18418 16.3843 3.75408C18.0799 5.32399 19.1016 7.48964 19.235 9.79661C19.3683 12.1036 18.603 14.3725 17.0995 16.1274V16.1287ZM10.3125 17.875C12.3182 17.875 14.2417 17.0782 15.66 15.66C17.0782 14.2417 17.875 12.3182 17.875 10.3125C17.875 8.30679 17.0782 6.38324 15.66 4.96499C14.2417 3.54675 12.3182 2.74999 10.3125 2.74999C8.30679 2.74999 6.38324 3.54675 4.96499 4.96499C3.54675 6.38324 2.74999 8.30679 2.74999 10.3125C2.74999 12.3182 3.54675 14.2417 4.96499 15.66C6.38324 17.0782 8.30679 17.875 10.3125 17.875Z" fill="#212121"/>
+											</svg>
+										</button>
+									</div>
+									<select name="country" class="js-choice">
+										<option value="">Choose the country</option>
+										<option value="us">USA</option>
+										<option value="ua">Ukraine</option>
+										<option value="de">Germany</option>
+										<option value="ru">Rossia</option>
+										<option value="pl">Poland</option>
+										<option value="lv">Latvia</option>
+										<option value="lt">Lithuania</option>
+									</select>
+								</form>
+							</div>
+						</div>
+					</div>
+				</header>
+				<main class="main">
+					<div class="title-wrapper">
+						<div class="title-wrapper__container">
+							<h1 class="visually-hidden">Online news - only fresh news</h1>
+							<h2 class="main__title hide">По вашему запросу “новости про IT” найдено 6 результатов</h2>
+						</div>
+					</div>
+						<section class="news">
+							<div class="news__container">
+								<h2 class="visually-hidden">Online news - news list</h2>
+								<div class="news-container">
+									<ul class="news-list">
+										<li class="news-item">
+											<!--<img src="img/test.jpg" alt="image news" class="news-image" width="270" height="200">
+											<h3 class="news-title">
+												<a href="#" target="_blank" class="news-link">Продажи китайских смартфонов в России выросли в два раза</a>
+											</h3>
+											<p class="news-descriptions">
+												По данным МТС, продажи устройств Huawei за первые две недели марта увеличились на 300%...
+											</p>
+											<div class="news-dats">
+												<time class="news-datetime" datetime="2022-03-16T16:11:11Z">
+													<span>16/03/2022</span> 11:06
+												</time>
+												<div class="news-author">Эрик Крипке</div>
+											</div>-->
+										</li>
+									</ul>
+								</div>
+							</div>
+						</section>
+					</main>
+				<footer class="footer">
+					<div class="footer__container">
+						<div class="footer-content">
+							<img class="footer-logo" src="img/logo.svg" alt="logo">
+							<div class="footer-copirait">© 2020-2022 News</div>
+							<div class="footer-social">
+								<a href="https://twitter.com/" target="_blank"><span class="social _icon-twitter"></span></a>
+								<a href="https://habr.com/" target="_blank"><span class="social _icon-habr"></span></a>
+								<a href="https://vk.com/" target="_blank"><span class="social _icon-vk"></span></a>
+							</div>
+						</div>
+					</div>
+				</footer>
+			</div>
+		</body>
+</html>
