@@ -18,7 +18,7 @@ const choices = new Choices(choicesElem, {
 
 //app get
 
-const getData = async (error, url) => {
+const getData = (error, url) => {
 	return fetch(url, {
 		headers: {
 			'X-Api-Key': API_KEY,
