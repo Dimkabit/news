@@ -103,13 +103,13 @@ const loadNews = async () => {
 	const	country = localStorage.getItem('country') || 'ru';
 	choices.setChoiceByValue(country);
 	mainTitle.classList.add('hide');
-	const data = await getData(`http://newsapi.org/v2/top-headlines?country=${country}&pageSize=100`);
+	const data = await getData(`https://newsapi.org/v2/top-headlines?country=${country}&pageSize=100`);
 	renderCard(data.articles);
 	
 };
 
 const loadSearch = async (value) => {
-	const data = await getData(`http://newsapi.org/v2/everything?q=${value}`);
+	const data = await getData(`https://newsapi.org/v2/everything?q=${value}`);
 	mainTitle.classList.remove('hide');
 	const strSearch = ['найден', 'найдено', 'найдено'];	
 	const strResolt = ['результат', 'результата', 'результатов'];
