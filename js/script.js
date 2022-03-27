@@ -18,13 +18,15 @@ const choices = new Choices(choicesElem, {
 
 //app get
 
-const getData = async (url) => {
+const getData = async (error, url) => {
 	const response = await fetch(url, {
 		headers: {
 			'X-Api-Key': API_KEY,
 		}
 	});
-
+	if(!response.ok) {
+		error(new Error(response.status))
+	}
 	const data = await response.json();
 
 	return data
@@ -95,7 +97,13 @@ const renderCard = (data) => {
 	
 }
 
+const showError = (err) => {
+	console.warn(err);
+	newsList.innerHTML = '';
+	mainTitle.textContent = `Произошла ошибка, повторите попытку `;
+	mainTitle.classList.remove('hide');
 
+}
 
 
 const loadNews = async () => {
@@ -103,13 +111,14 @@ const loadNews = async () => {
 	const	country = localStorage.getItem('country') || 'ru';
 	choices.setChoiceByValue(country);
 	mainTitle.classList.add('hide');
-	const data = await getData(`https://newsapi.org/v2/top-headlines?country=${country}&pageSize=100`);
+	const data = await getData(showError, `https://newsapi.org/v2/top-headlines?country=${country}&pageSize=100`);
 	renderCard(data.articles);
 	
 };
 
 const loadSearch = async (value) => {
-	const data = await getData(`https://newsapi.org/v2/everything?q=${value}`);
+	newsList.innerHTML = '<li class="preload"></li>';
+	const data = await getData(showError, `https://newsapi.org/v2/everything?q=${value}`);
 	mainTitle.classList.remove('hide');
 	const strSearch = ['найден', 'найдено', 'найдено'];	
 	const strResolt = ['результат', 'результата', 'результатов'];
