@@ -19,17 +19,18 @@ const choices = new Choices(choicesElem, {
 //app get
 
 const getData = async (error, url) => {
-	const response = await fetch(url, {
+	return fetch(url, {
 		headers: {
 			'X-Api-Key': API_KEY,
 		}
-	});
-	if(!response.ok) {
-		error(new Error(response.status))
-	}
-	const data = await response.json();
+	}).then(response => {
+		if(!response.ok) {
+			throw	error(new Error(response.status))
+		}
+		return response.json()
+	}).catch(error);
+	
 
-	return data
 };
 
 const getCorectFormat = isoDate => {
